@@ -39,7 +39,7 @@ structures that are proven to reflect relevant information about the
 structure of data and that can be effectively constructed and
 manipulated in practice. Below is an exemple of simplicial complex:
 
-![simplicial complex example](Images/Pers14.PNG)
+![simplicial complex example](Tutos/Images/Pers14.PNG)
 
 A filtration is an increasing sequence of sub-complexes of a simplicial
 complex $\mathcal{K}$. It can be seen as ordering the simplices included in
@@ -50,15 +50,15 @@ complexes](https://en.wikipedia.org/wiki/Vietoris%E2%80%93Rips_complex),
 [alpha
 complexes](https://en.wikipedia.org/wiki/Alpha_shape#Alpha_complex).
 
-[Notebook: Simplex trees](Tuto-GUDHI-simplex-Trees.ipynb). In Gudhi,
+[Notebook: Simplex trees](Tutos/Tuto-GUDHI-simplex-Trees.ipynb). In Gudhi,
 filtered simplicial complexes are encoded through a data structure
 called simplex tree. Vertices are represented as integers, edges as
 pairs of integers, etc.
 
-![simplex tree representation](Images/Simplex_tree_representation.png)
+![simplex tree representation](Tutos/Images/Simplex_tree_representation.png)
 
 [Notebook: Vietoris-Rips complexes and alpha complexes from data
-points](https://github.com/GUDHI/TDA-tutorial/blob/master/Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb).
+points](Tutos/Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb).
 In practice, the first step of the **TDA Analysis Pipeline** is to define a
 filtration of simplicial complexes for some data. This notebook explains
 how to build Vietoris-Rips complexes and alpha complexes (represented as
@@ -66,11 +66,11 @@ simplex trees) from data points in $\mathbb{R}^d$, using the simplex tree data
 structure.
 
 
-This [Notebook](Tuto-GUDHI-alpha-complex-visualization.ipynb) shows how to visualize simplicial complexes.
+This [Notebook](Tutos/Tuto-GUDHI-alpha-complex-visualization.ipynb) shows how to visualize simplicial complexes.
 
 
 [Notebook: Rips and alpha complexes from pairwise
-distance](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb).
+distance](Tutos/Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb).
 It is also possible to define Rips complexes in general metric spaces
 from a matrix of pairwise distances. The definition of the metric on the
 data is usually given as an input or guided by the application. It is
@@ -85,13 +85,13 @@ TDA signatures can extracted from point clouds but in many cases in data
 sciences the question is to study the topology of the sublevel sets of a
 function.
 
-![function exemple](Images/sublevf.png)
+![function exemple](Tutos/Images/sublevf.png)
 
 Above is an example for a function defined on a subset of
 $\mathbb{R}$ but in general the function $f$ is defined on a subset of
 $\mathbb{R}^d$.
 
-[Notebook: cubical complexes](Tuto-GUDHI-cubical-complexes.ipynb). One
+[Notebook: cubical complexes](Tutos/Tuto-GUDHI-cubical-complexes.ipynb). One
 first approach for studying the topology of the sublevel sets of a
 function is to define a regular grid on
 $\mathbb{R}^d$ and then to define a filtered complex based on this grid and the
@@ -115,9 +115,9 @@ simplicial complexes and topological spaces. It encodes the evolution of
 the homology groups of the nested complexes across the scales. The
 diagram below shows several level sets of the filtration:
 
-![persistence](Images/pers.png)
+![persistence](Tutos/Images/pers.png)
 
-[Notebook: persistence diagrams](https://github.com/GUDHI/TDA-tutorial/blob/master/Tuto-GUDHI-persistence-diagrams.ipynb)
+[Notebook: persistence diagrams](Tutos/Tuto-GUDHI-persistence-diagrams.ipynb)
 In this notebook we show how to compute barcodes and persistence
 diagrams from a filtration defined on the Protein binding dataset. This
 tutorial also introduces the bottleneck distance between persistence
@@ -125,16 +125,16 @@ diagrams.
 
 ### 03 - Representations of persistence and linearization
 
-In this [notebook](Tuto-GUDHI-representations.ipynb), we learn how to
+In this [notebook](Tutos/Tuto-GUDHI-representations.ipynb), we learn how to
 use alternative representations of persistence with the representations
 module and finally we see a first example of how to efficiently combine
 machine learning and topological data analysis.
 
-This [notebook](Tuto-GUDHI-Expected-persistence-diagrams.ipynb)
+This [notebook](Tutos/Tuto-GUDHI-Expected-persistence-diagrams.ipynb)
 illustrates the notion of “Expected Persistence Diagram”, which is a way
 to encode the topology of a random process as a deterministic measure.
 
-This [notebook](Tuto-GUDHI-persistent-entropy.ipynb) shows how to summarize
+This [notebook](Tutos/Tuto-GUDHI-persistent-entropy.ipynb) shows how to summarize
 the information given by persistent homology using persistent entropy (a
 number) and the ES-function (a curve) and explains in which situations they
 can be useful.
@@ -146,7 +146,7 @@ features close to the diagonal. Since they correspond to topological
 structures that die very soon after they appear in the filtration, these
 points are generally considered as “topological noise”. Confidence
 regions for persistence diagram provide a rigorous framework to this
-idea. This [notebook](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb)
+idea. This [notebook](Tutos/Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb)
 introduces the subsampling approach of [Fasy et al. 2014
 AoS](https://projecteuclid.org/download/pdfview_1/euclid.aos/1413810729).
 
@@ -167,15 +167,15 @@ Two libraries related to Gudhi:
     tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb).
   - [Perslay](https://github.com/MathieuCarriere/perslay): A Simple and
     Versatile Neural Network Layer for Persistence Diagrams. See [this
-    notebook](Tuto-GUDHI-perslay-visu.ipynb).
+    notebook](Tutos/Tuto-GUDHI-perslay-visu.ipynb).
 
 ### 07 - Alternative filtrations and robust TDA
 
-This [notebook](Tuto-GUDHI-DTM-filtrations.ipynb) introduces the
+This [notebook](Tutos/Tuto-GUDHI-DTM-filtrations.ipynb) introduces the
 distance to measure (DTM) filtration, as defined in [this
 paper](https://arxiv.org/abs/1811.04757). This filtration can be used
 for robust TDA. The DTM can also be used for robust approximations of
-compact sets, see this [notebook](Tuto-GUDHI-kPDTM-kPLM.ipynb).
+compact sets, see this [notebook](Tutos/Tuto-GUDHI-kPDTM-kPLM.ipynb).
 
 ### 08 - Topological Data Analysis for Time series
 
@@ -185,49 +185,49 @@ compact sets, see this [notebook](Tuto-GUDHI-kPDTM-kPLM.ipynb).
 
 ### 11 - Inverse problem and optimization with TDA
 
-In this [notebook](Tuto-GUDHI-optimization.ipynb), we will see how Gudhi and
+In this [notebook](Tutos/Tuto-GUDHI-optimization.ipynb), we will see how Gudhi and
 Tensorflow can be combined to perform optimization of persistence diagrams to
 solve an inverse problem. This other, less complete
-[notebook](Tuto-GUDHI-PyTorch-optimization.ipynb) shows that this kind of
+[notebook](Tutos/Tuto-GUDHI-PyTorch-optimization.ipynb) shows that this kind of
 optimization works just as well with PyTorch.
 
 ## Complete list of notebooks for TDA
 
-[Simplex trees](Tuto-GUDHI-simplex-Trees.ipynb)
+[Simplex trees](Tutos/Tuto-GUDHI-simplex-Trees.ipynb)
 
 [Vietoris-Rips complexes and alpha complexes from data
-points](Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb)
+points](Tutos/Tuto-GUDHI-simplicial-complexes-from-data-points.ipynb)
 
 [Visualizing simplicial
-complexes](Tuto-GUDHI-alpha-complex-visualization.ipynb)
+complexes](Tutos/Tuto-GUDHI-alpha-complex-visualization.ipynb)
 
 [Rips and alpha complexes from pairwise
-distance](Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb)
+distance](Tutos/Tuto-GUDHI-simplicial-complexes-from-distance-matrix.ipynb)
 
-[Cubical complexes](Tuto-GUDHI-cubical-complexes.ipynb)
+[Cubical complexes](Tutos/Tuto-GUDHI-cubical-complexes.ipynb)
 
 [Persistence diagrams and bottleneck
-distance](Tuto-GUDHI-persistence-diagrams.ipynb)
+distance](Tutos/Tuto-GUDHI-persistence-diagrams.ipynb)
 
-[Representations of persistence](Tuto-GUDHI-representations.ipynb)
+[Representations of persistence](Tutos/Tuto-GUDHI-representations.ipynb)
 
 [Expected Persistence
-Diagram](Tuto-GUDHI-Expected-persistence-diagrams.ipynb)
+Diagram](Tutos/Tuto-GUDHI-Expected-persistence-diagrams.ipynb)
 
 [Confidence regions for persistence diagrams - data
-points](Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb)
+points](Tutos/Tuto-GUDHI-ConfRegions-PersDiag-datapoints.ipynb)
 
 [ATOL
 tutorial](https://github.com/martinroyer/atol/blob/master/demo/atol-demo.ipynb)
 
-[Perslay](Tuto-GUDHI-perslay-visu.ipynb)
+[Perslay](Tutos/Tuto-GUDHI-perslay-visu.ipynb)
 
-[DTM-filtrations](Tuto-GUDHI-DTM-filtrations.ipynb)
+[DTM-filtrations](Tutos/Tuto-GUDHI-DTM-filtrations.ipynb)
 
-[kPDTM-kPLM](Tuto-GUDHI-kPDTM-kPLM.ipynb)
+[kPDTM-kPLM](Tutos/Tuto-GUDHI-kPDTM-kPLM.ipynb)
 
-[Inverse problem and optimization with TDA](Tuto-GUDHI-optimization.ipynb)
+[Inverse problem and optimization with TDA](Tutos/Tuto-GUDHI-optimization.ipynb)
 
-[PyTorch differentiation of diagrams](Tuto-GUDHI-PyTorch-optimization.ipynb)
+[PyTorch differentiation of diagrams](Tutos/Tuto-GUDHI-PyTorch-optimization.ipynb)
 
 Contact : <bertrand.michel@ec-nantes.fr>
